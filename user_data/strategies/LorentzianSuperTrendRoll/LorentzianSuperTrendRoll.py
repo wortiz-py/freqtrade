@@ -823,7 +823,7 @@ class LorentzianSuperTrendRoll(IStrategy):
         # SuperTrend Crossovers (Pine: closelong_supertrend, closeshort_supertrend)
         # Pine: closelong_supertrend = ta.crossunder(close, supertrend)
         # Pine: closeshort_supertrend = ta.crossover(close, supertrend)
-        import freqtrade.vendor.qtpylib.indicators as qtpylib
+        from technical import qtpylib
         dataframe['close_cross_below_st'] = qtpylib.crossed_below(dataframe['close'], dataframe['supertrend'])
         dataframe['close_cross_above_st'] = qtpylib.crossed_above(dataframe['close'], dataframe['supertrend'])
 
